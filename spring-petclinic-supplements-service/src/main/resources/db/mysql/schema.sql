@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS petclinic;
+GRANT ALL PRIVILEGES ON petclinic.* TO pc@localhost IDENTIFIED BY 'pc';
+
+USE petclinic;
+
+CREATE TABLE IF NOT EXISTS supplements (
+  id INT(4) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  supplement VARCHAR(256),
+  price DECIMAL(13,2)
+) engine=InnoDB;
